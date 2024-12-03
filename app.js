@@ -150,3 +150,19 @@ console.log ('-------------------------- Part 2: Thinking Methodically----------
       console.log("Changing the Occupation to Job")
       changePrpertyName(dataBase);
       console.log("-----------------------------------");
+
+
+
+// Use the reduce method to calculate the sum of the ages.
+        function ageSUMM () {
+          let sum = 0;
+          for (let i=0 ; i < dataBase.length; i++) {
+            sum += Number (dataBase[i].age);
+          }
+          console.log(`The sum of all ages is ${sum}`);
+        }
+  
+        console.log("CAlculating the Age Summ")
+        ageSUMM(dataBase);
+        console.log("-----------------------------------");
+  
