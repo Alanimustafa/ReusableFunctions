@@ -153,16 +153,19 @@ console.log ('-------------------------- Part 2: Thinking Methodically----------
 
 
 
-// Use the reduce method to calculate the sum of the ages.
+// Use the reduce method to calculate the sum of the ages and the age average.
         function ageSUMM () {
           let sum = 0;
           for (let i=0 ; i < dataBase.length; i++) {
             sum += Number (dataBase[i].age);
           }
+          avg = sum / dataBase.length ;
           console.log(`The sum of all ages is ${sum}`);
+          console.log(`The age average is ${avg} years old`);
         }
   
         console.log("CAlculating the Age Summ")
         ageSUMM(dataBase);
         console.log("-----------------------------------");
-  
+
+        
