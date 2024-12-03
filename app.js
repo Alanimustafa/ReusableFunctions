@@ -93,5 +93,48 @@ function numbersIn(n, startNumber = 1) {
 console.log(`------------------------------------------------------`)
 console.log(numbersIn(5));
 
+//--------------------------------------------------------------------------
 
+
+
+
+//Part 2: Thinking Methodically
+
+console.log ('-------------------------- Part 2: Thinking Methodically---------------')
+
+
+  let dataBase = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+                  { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+                  { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+                  { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+                  { id: "7", name: "Bilbo", occupation: "None", age: "111" },
+                  { id: "26", name: "Mustafa", occupation: "SW Eng", age: "46" }] ;  // I added this object for testing purposes.
+
+
+
+// Sort the array by age.
+      dataBase.sort( (first, second) => {  // Using the .sort methode to sort the values
+            return Number(first.age) - Number(second.age); // Converted the strings value to numbers and then returned the true of the subtraction to the sort.
+          });
+
+      console.log("Database Sorting by Age");
+      console.log(dataBase);
+      console.log ("------------------------------");
+
+
+
+// Filter the array to remove entries with an age greater than 50.
+      function filterOver50 (dataBase) {
+        result = [];
+        for (let i=0 ; i < dataBase.length; i++) {
+          if (Number(dataBase[i].age) < 50) {
+            result.push(dataBase[i]);      
+          }
+        }
+        console.log(result);
+        
+      }
+      console.log("Remove entries with an age over 50")
+      filterOver50(dataBase);
+      console.log("-----------------------------------");
 
