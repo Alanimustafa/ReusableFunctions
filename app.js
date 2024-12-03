@@ -138,3 +138,15 @@ console.log ('-------------------------- Part 2: Thinking Methodically----------
       filterOver50(dataBase);
       console.log("-----------------------------------");
 
+//Map the array to change the “occupation” key to “job” and increment every age by 1.
+      function changePrpertyName (dataBase) {
+        for (let i=0 ; i < dataBase.length; i++) {
+          dataBase[i].job = dataBase[i].occupation; // Addign a new property called job which is a copy of Occupation.
+          delete dataBase[i].occupation; // Removing the occupation from the object.
+        }
+        console.log(dataBase);
+      }
+
+      console.log("Changing the Occupation to Job")
+      changePrpertyName(dataBase);
+      console.log("-----------------------------------");
