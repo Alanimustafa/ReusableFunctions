@@ -76,3 +76,22 @@ longestString(["Red", "Green", "Blue","Purpule"],4);
 
 //--------------------------------------------------------------------------
 
+
+
+//Take a number, n, and print every number between 1 and n without using loops. Use recursion.
+let allNums = [];
+function numbersIn(n, startNumber = 1) {
+  if (startNumber > n-2) { // I deduct 2 becasue I added 1 to the start, the difference to oupt only the numbers in between.
+    return; // To break the loop if the n exceeds the N number. 
+  }
+  allNums.push(startNumber+1); // I created an array to push the results in it. I Added (1) to start from (2) or the next number after the start number.
+  
+  numbersIn(n, startNumber + 1); // Recursive call with incremented current
+   return `The numbers between ${startNumber} and ${n} are : ${allNums}`; 
+}
+
+console.log(`------------------------------------------------------`)
+console.log(numbersIn(5));
+
+
+
