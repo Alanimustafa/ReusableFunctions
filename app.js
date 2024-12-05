@@ -103,12 +103,12 @@ console.log(numbersIn(5));
 console.log ('-------------------------- Part 2: Thinking Methodically---------------')
 
 
-  let dataBase = [{ id: "42", name: "Bruce", occupation: "Knight", age: "41" },
-                  { id: "48", name: "Barry", occupation: "Runner", age: "25" },
-                  { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
-                  { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
-                  { id: "7", name: "Bilbo", occupation: "None", age: "111" },
-                  { id: "26", name: "Mustafa", occupation: "SW Eng", age: "46" }] ;  // I added this object for testing purposes.
+  let dataBase = [{ id: "42", name: "Bruce", occupation: "Knight", age: 41 },
+                  { id: "48", name: "Barry", occupation: "Runner", age: 25 },
+                  { id: "57", name: "Bob", occupation: "Fry Cook", age: 19 },
+                  { id: "63", name: "Blaine", occupation: "Quiz Master", age: 58 },
+                  { id: "7", name: "Bilbo", occupation: "None", age: 111 },
+                  { id: "26", name: "Mustafa", occupation: "SW Eng", age: 46 }] ;  // I added this object for testing purposes.
 
 
 
@@ -168,4 +168,35 @@ console.log ('-------------------------- Part 2: Thinking Methodically----------
         ageSUMM(dataBase);
         console.log("-----------------------------------");
 
+
+//--------------------------------------------------------------------------
+
+
+
+
+//Part 3: Thinking Critically
+
+// Take an object and increment its age field.
+        function ageIncrement (mainDBase) {
+            for (let ages in mainDBase) {
+              mainDBase[ages].age = mainDBase[ages].age+1 ; 
+            }
+            console.log(mainDBase);             
+        }
+        console.log("Part 3: Thinking Critically");
+        ageIncrement(dataBase); 
+
+// Take an object, make a copy, and increment the age field of the copy. Return the copy.
+      function copyObject (original) {
+        let dataBaseCopy = [];
+        for (obj in original) {
+          dataBase[obj].age = dataBase[obj].age + 1;
+          dataBaseCopy.push(dataBase[obj]);
+        }
+        console.log(dataBaseCopy);
+      } 
+      copyObject(dataBase);       
+
+
+// -------------------------------------------------------------- Creating Reusable Functions - End ---------------------------------------      
         
